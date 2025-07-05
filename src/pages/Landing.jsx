@@ -12,7 +12,7 @@ export default function Landing() {
             Shop Now <FaArrowRight />
           </Link>
         </div>
-        <img src="./src/assets/imgs/image-panel.jpg" alt="first background" />
+        <img src="src/assets/imgs/image-panel.jpg" alt="first background" />
       </section>
     </div>
   );
