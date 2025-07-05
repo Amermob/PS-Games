@@ -1,7 +1,7 @@
 export const Games = [
     {
       id: "alan-wake-2",
-      img: "/src/assets/PS5 Games/Cover/alan-wake-2-deluxe-edition-cover.jpg",
+      img: "src/assets/PS5 Games/Cover/alan-wake-2-deluxe-edition-cover.jpg",
       title: "Alan Wake 2",
       price: 120,
       type: "PS5",
