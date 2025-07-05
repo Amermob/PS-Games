@@ -67,7 +67,7 @@ export default function Home() {
       <header className="interact">
         <div className="logo-ul hide-in-desktop">
           <Link onClick={title} to=".">
-            <img src="/src/assets/Icons/cover.png" alt="" />
+            <img src="src/assets/Icons/cover.png" alt="" />
           </Link>
         </div>
 
