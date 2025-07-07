@@ -58,14 +58,14 @@ body {
         display: flex;
 
         button {
-            border: 1px solid #488eff;
+            b: 1px solid #488eff;
         }
     }
 
     input {
         width: 250px;
         padding: 12px;
-        border: 1px solid #fff;
+        b: 1px solid #fff;
         outline: none;
 
     }
@@ -76,7 +76,7 @@ body {
         color: #488eff;
         padding: 10px 15px;
         text-decoration: none;
-        border-left: 1px solid;
+        b-left: 1px solid;
     }
 
     .user {
@@ -110,7 +110,7 @@ body {
                 right: 2%;
                 background: red;
                 color: #fff;
-                border-radius: 50%;
+                b-radius: 50%;
                 padding: 5px;
                 font-size: 10px;
             }
@@ -171,7 +171,7 @@ body {
             padding: 10px 15px;
             background-color: #488eff;
             color: #fff;
-            border: none;
+            b: none;
         }
     }
 
@@ -208,7 +208,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 15px 10px;
-    border-top: 1px solid #ffffff58;
+    b-top: 1px solid #ffffff58;
 
     a {
         color: #fff;
@@ -242,7 +242,7 @@ body {
     width: 100%;
     background-color: #488eff;
     padding: 10px;
-    border-top: 1px solid #ffffff58;
+    b-top: 1px solid #ffffff58;
     z-index: 9999;
 }
 
@@ -267,7 +267,7 @@ body {
         text-decoration: none;
         color: #fff;
         padding: 10px 15px;
-        border: none;
+        b: none;
     }
 
     .imgs {
@@ -285,11 +285,11 @@ body {
             z-index: 2;
             background-color: #488eff;
             padding: 10px;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
+            b-radius: 10px;
+            -webkit-b-radius: 10px;
+            -moz-b-radius: 10px;
+            -ms-b-radius: 10px;
+            -o-b-radius: 10px;
         }
 
         p {
@@ -326,7 +326,7 @@ body {
             display: block;
             padding: 5px 20px;
             background-color: #488eff;
-            border: 2px solid #fff;
+            b: 2px solid #fff;
             color: #fff;
             border-radius: 10px;
             -webkit-border-radius: 10px;
@@ -543,7 +543,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     margin: 10px 0;
     padding: 10px;
     border: 1px solid #fff;
