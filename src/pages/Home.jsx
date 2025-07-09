@@ -15,13 +15,12 @@ export default function Home() {
     setOrders((prev) => prev.filter((game) => game.id !== e.target.id));
   }
 
-  const everyOrder = order.map((game) => {
+  const everyOrder = [...new Set(order)].map((game) => {
     return (
       <div key={game.id} className="order">
         <img src={game.img} alt={game.title} />
         <h4>{game.title}</h4>
         <span>
-          
           <svg
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +36,37 @@ export default function Home() {
               d="M702.8,603.3c7.8-17.2,12.9-35.9,14.9-55.5l-128.1,27.2v-52.4l113.2-24.1c7.8-17.2,12.9-35.9,14.9-55.5l-128.1,27.2v-188.3c-19.6,11-37.1,25.7-51.2,43v156.2l-51.2,10.9v-235.7c-19.6,11-37.1,25.7-51.2,43v203.6l-114.6,24.4c-7.8,17.2-12.9,35.9-14.9,55.5l129.5-27.5v66l-138.8,29.5c-7.8,17.2-12.9,35.9-14.9,55.5l145.3-30.9c11.8-2.5,22-9.5,28.6-19.1l26.6-39.5h0c2.8-4.1,4.4-9,4.4-14.3v-58.1l51.2-10.9v104.7l164.4-35h0Z"
             />
           </svg>
-          {game.price}{" "}
+          {game.price * game.quantity}{" "}
         </span>
+        <button
+          onClick={() =>
+            setOrders((prev) =>
+              prev.map((g) =>
+                g.id === game.id ? { ...g, quantity: g.quantity + 1 } : g
+              )
+            )
+          }
+        >
+          +
+        </button>
+        <span>Quantity: {game.quantity} </span>
+        {game.quantity > 0 ? (
+          <button
+            onClick={() =>
+              setOrders((prev) =>
+                prev.map((g) =>
+                  g.id === game.id ? { ...g, quantity: g.quantity + 1 } : g
+                )
+              )
+            }
+          >
+            +
+          </button>
+        ) : (
+          <button onClick={(e) => deleteGame(e)} id={game.id}>
+            Delete
+          </button>
+        )}
         <button onClick={(e) => deleteGame(e)} id={game.id}>
           Delete
         </button>
@@ -50,8 +78,8 @@ export default function Home() {
     document.title = "PS Games";
   }
 
-  const arrayOfPrices = order.map((games) => {
-    return games.price;
+  const arrayOfPrices = [...new Set(order)].map((games) => {
+    return games.price * games.quantity;
   });
 
   const total = arrayOfPrices.reduce((i, e) => {
@@ -91,7 +119,7 @@ export default function Home() {
           </div>
           <div className="cart" onClick={() => setCart(!cart)}>
             <IoCartOutline />
-            <span>{order.length}</span>
+            <span>{everyOrder.length}</span>
           </div>
           <div className="log-in">
             <Link to="login">Login</Link>
