@@ -5,7 +5,7 @@ export const Games = [
     title: "Alan Wake 2",
     price: 120,
     type: "PS5",
-    quantity: 1,
+    quantity: 1
   },
   {
     id: "assassin-s-creed-valhalla",
@@ -265,3 +265,16 @@ export const Games = [
     quantity: 1,
   },
 ];
+
+
+function shuffleGames() {
+  for (let i = Games.length - 1; i > 0; i--) {
+    const random = Math.floor(Math.random() * (i + 1))
+    const temp = Games[i]
+    Games[i] = Games[random]
+    Games[random] = temp
+  }
+  return Games
+}
+
+shuffleGames()
